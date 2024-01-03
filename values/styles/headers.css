@@ -25,6 +25,7 @@ header .mdc-top-app-bar__row:nth-child(2) .mdc-top-app-bar__section { /* separat
 
 header .mdc-top-app-bar__row:nth-child(2) .mdc-top-app-bar__section hr { /* separator */
     width: var(--percent-separator);
+    border-color: var(--color-secondary);
 }
 
 header .mdc-top-app-bar__row:nth-child(3) .mdc-top-app-bar__section .mdc-button { /* strony */
