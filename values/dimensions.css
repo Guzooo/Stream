@@ -1,0 +1,13 @@
+:root {
+
+   --margin-standard: 16px;
+   --margin-separator: 0px;
+   --length-separator: 1px;
+   --percent-separator: 100%;
+
+   /* about headers */
+   --height-header-first-row: 32px;
+   --size-text-header-first-row: 10px;
+   --size-text-header-second-row: 32px;
+
+}

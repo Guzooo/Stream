@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg1"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   sodipodi:docname="logo.svg"
+   inkscape:export-filename="logo256.png"
+   inkscape:export-xdpi="520.19202"
+   inkscape:export-ydpi="520.19202"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview1"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="mm"
+     inkscape:zoom="23.17643"
+     inkscape:cx="33.029245"
+     inkscape:cy="1.8769068"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs1" />
+  <g
+     inkscape:label="Warstwa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       id="rect2"
+       style="stroke-width:0.154794"
+       d="M 8.9004715,0.5 H 12.5 C 12.777,0.5 13,0.723 13,1 13,1.277 12.777,1.5 12.5,1.5 H 8.9004715 c 0.1242619,-0.4646205 0.1128428,-0.60985015 0,-1 z"
+       sodipodi:nodetypes="cssscc" />
+    <ellipse
+       style="fill:none;fill-opacity:1;stroke:#000000;stroke-width:0.276923;stroke-dasharray:none;stroke-opacity:1"
+       id="path1-1-6-89-8"
+       ry="0.86153823"
+       rx="0.86153847"
+       cy="0.99999976"
+       cx="8.1000004" />
+    <circle
+       style="fill:#000000;stroke-width:0.207446"
+       id="path1"
+       cx="0.5"
+       cy="1"
+       r="0.5" />
+    <circle
+       style="fill:#000000;stroke-width:0.207446"
+       id="path1-1"
+       cx="1.7"
+       cy="1"
+       r="0.5" />
+    <circle
+       style="fill:#000000;stroke-width:0.207446"
+       id="path1-1-6"
+       cx="2.9000001"
+       cy="1"
+       r="0.5" />
+    <rect
+       style="fill:#000000;stroke-width:0.433677"
+       id="rect1"
+       width="5"
+       height="1"
+       x="3.5999999"
+       y="0.5"
+       ry="0.5" />
+  </g>
+</svg>

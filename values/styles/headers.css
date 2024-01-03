@@ -1,0 +1,34 @@
+header {
+    background-color: var(--color-primary-second) !important;
+}
+
+.mdc-top-app-bar__section img { /* logo */
+    margin-right: var(--margin-standard);
+}
+
+header .mdc-top-app-bar__row:nth-child(1) { /* górne akcje */
+    height: var(--height-header-first-row);
+}
+
+header .mdc-top-app-bar__row:nth-child(1) .mdc-top-app-bar__section .mdc-button { /* górne akcje */
+    color: var(--color-secondary);
+    font-size: var(--size-text-header-first-row);
+}
+
+header .mdc-top-app-bar__row:nth-child(2) { /* separator */
+    height: var(--length-separator);
+}
+
+header .mdc-top-app-bar__row:nth-child(2) .mdc-top-app-bar__section { /* separator */
+    padding: var(--margin-separator);
+}
+
+header .mdc-top-app-bar__row:nth-child(2) .mdc-top-app-bar__section hr { /* separator */
+    width: var(--percent-separator);
+}
+
+header .mdc-top-app-bar__row:nth-child(3) .mdc-top-app-bar__section .mdc-button { /* strony */
+    color: var(--color-secondary);
+    font-size: var(--size-text-header-second-row);
+    margin-right: var(--margin-standard);
+}
