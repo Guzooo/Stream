@@ -51,6 +51,11 @@ const PrefabHeader = (function(){
                                 <span class="mdc-button__label">Profil</span>
                             </a>
                         </section>
+                        <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end">
+                            <button class="mdc-icon-button material-icons">
+                                search
+                            </button>
+                        </section>
                     </div>
                 </header>`);
     }
