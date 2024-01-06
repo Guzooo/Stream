@@ -1,0 +1,4 @@
+.description {
+    color: var(--color-secondary-second);
+    font-size: var(--size-text-description);
+}

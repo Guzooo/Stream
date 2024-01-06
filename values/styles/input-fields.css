@@ -1,0 +1,34 @@
+.mdc-text-field input { /* kursor przy pisaniu*/
+    caret-color: var(--color-accent) !important;
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label { /* domyślny tekst */
+    color: var(--color-secondary);
+}
+
+.mdc-text-field:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label { /* domyślny tekst, fokus */
+    color: var(--color-accent);
+}
+
+
+/* field--outlined */
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing { /* aktywny*/
+       border-color: var(--color-secondary);
+}
+
+
+.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing { /* aktywny, kursor na */
+
+       border-color: var(--color-accent) !important;
+}
+
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing { /* aktywny, fokus*/
+       border-color: var(--color-accent);
+}
