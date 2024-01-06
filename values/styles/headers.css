@@ -13,7 +13,7 @@ header .mdc-top-app-bar__row:nth-child(1) { /* górne akcje */
 header .mdc-top-app-bar__row:nth-child(1) .mdc-top-app-bar__section .mdc-button { /* górne akcje */
     color: var(--color-secondary);
     font-size: var(--size-text-header-first-row);
-    transition-duration: 300ms;
+    transition-duration: var(--animation-time);
 }
 
 header .mdc-top-app-bar__row:nth-child(2) { /* separator */
@@ -33,11 +33,11 @@ header .mdc-top-app-bar__row:nth-child(3) .mdc-top-app-bar__section .mdc-button 
     color: var(--color-secondary);
     font-size: var(--size-text-header-second-row);
     margin-right: var(--margin-standard);
-    transition-duration: 300ms;
+    transition-duration: var(--animation-time);
 }
 .mdc-top-app-bar__section .mdc-icon-button { /* przycisk szukaj */
     color: var(--color-secondary);
-    transition-duration: 300ms;
+    transition-duration: var(--animation-time);
 }
 
 .mdc-top-app-bar__action-item:hover { /* elementy, kursor na */

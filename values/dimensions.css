@@ -4,6 +4,7 @@
    --margin-separator: 0px;
    --length-separator: 1px;
    --percent-separator: 100%;
+   --animation-time: 300ms;
 
    /* about headers */
    --height-header-first-row: 32px;
