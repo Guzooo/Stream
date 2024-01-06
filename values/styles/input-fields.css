@@ -6,12 +6,22 @@
     color: var(--color-secondary);
 }
 
-.mdc-text-field:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-floating-label { /* domyślny tekst, fokus */
+.mdc-text-field:not(.mdc-text-field--disabled, .mdc-text-field--invalid).mdc-text-field--focused .mdc-floating-label { /* domyślny tekst, fokus */
     color: var(--color-accent);
+}
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-floating-label { /* domyślny tekst, błąd */
+    color: var(--mdc-theme-error);
 }
 
 
 /* field--outlined */
+
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
+.mdc-text-field--invalid:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing { /* aktywny, błąd */
+       border-color: var(--mdc-theme-error) !important;
+}
 
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
 .mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
@@ -20,15 +30,16 @@
 }
 
 
-.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__leading,
-.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__notch,
-.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled) .mdc-notched-outline__trailing { /* aktywny, kursor na */
+.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled, .mdc-text-field--invalid) .mdc-notched-outline__leading,
+.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled, .mdc-text-field--invalid) .mdc-notched-outline__notch,
+.mdc-text-field:hover.mdc-text-field--outlined:not(.mdc-text-field--disabled, .mdc-text-field--invalid) .mdc-notched-outline__trailing { /* aktywny, kursor na */
 
        border-color: var(--color-accent) !important;
 }
 
-.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__leading,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__notch,
-.mdc-text-field--outlined:not(.mdc-text-field--disabled).mdc-text-field--focused .mdc-notched-outline__trailing { /* aktywny, fokus*/
+.mdc-text-field--outlined:not(.mdc-text-field--disabled, .mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__leading,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled, .mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__notch,
+.mdc-text-field--outlined:not(.mdc-text-field--disabled, .mdc-text-field--invalid).mdc-text-field--focused .mdc-notched-outline__trailing { /* aktywny, fokus*/
        border-color: var(--color-accent);
 }
+
