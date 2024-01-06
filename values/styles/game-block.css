@@ -1,0 +1,35 @@
+.game-block {
+    display: flex;
+    flex-direction: column; /* Kierunek rozmieszczenia elementów - pionowy */
+    justify-content: space-between; /* Rozmieszczenie równomierne wzdłuż osi pionowej */
+    align-items: center; /* Wyśrodkowanie wzdłuż osi poziomej */
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 50%; /* Szerokość 100% dostosowuje bloki do dostępnego miejsca */
+    transition: background-color 0.3s; /* Animacja zmiany koloru tła */
+}
+
+/* Dodatkowe style wyglądu tekstu w blokach */
+.game-block p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+
+    text-align: justify;
+
+}
+
+/* Lekki odstęp na górze pierwszego prostokąta */
+.game-block:first-child {
+    margin-top: 10px;
+}
+
+/* Stylowanie po najechaniu */
+.game-block:hover {
+    background-color: #b1afaf; /* Kolor podświetlenia po najechaniu */
+    cursor: pointer; /* Zmiana kursora na wskaźnik, aby pokazać interaktywność */
+}
