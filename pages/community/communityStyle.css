@@ -1,0 +1,69 @@
+/* Styl dla kontenera postContainer */
+#postContainer {
+    margin: 0px 30px; /* Margines 10px od góry/dolu i 30px od boków */
+    padding: 10px; /* Wewnętrzny odstęp 10px */
+}
+
+/* Styl dla pojedynczego posta */
+.post {
+    margin-bottom: 10px; /* Odstęp od innych postów */
+    background-color: #333; /* Ciemno szary element na górze */
+    color: white; /* Biały tekst dla treści wpisu */
+    padding: 10px; /* Wewnętrzny odstęp 10px */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    border: 5px solid #080808; /* Ciemno szary border */
+}
+
+/* Styl dla nagłówka posta (nazwa autora i data wpisu) */
+.post-header {
+    overflow: hidden; /* Ukryj przekraczający się tekst */
+    background-color: #333;
+}
+
+/* Styl dla nazwy autora */
+.post-author {
+    float: left; /* Wyśrodkowanie tekstu na lewo */
+    font-weight: bold; /* Pogrubiona czcionka */
+    font-size: 200%;
+}
+
+/* Styl dla daty wpisu */
+.post-date {
+    float: right; /* Wyśrodkowanie tekstu na prawo */
+    font-style: italic; /* Kursywa */
+}
+
+/* Styl dla treści wpisu */
+.post-content {
+    background-color: whitesmoke;
+    color: black;
+    margin-top: 10px; /* Odstęp od nagłówka posta */
+    max-height: 100px; /* Maksymalna wysokość, aby wyświetlać maksymalnie 5 linii tekstu */
+    overflow-y: scroll; /* Scrollowanie treści */
+    font-size: 150%;
+    border-radius: 3px; /* Zaokrąglenie rogów */
+    border: 3px solid #080808; /* Ciemno szary border */
+}
+
+/* Styl dla paginacji */
+.pagination {
+    margin-top: 20px; /* Odstęp od treści postów */
+    text-align: center; /* Wyśrodkowanie linków paginacji */
+    background-color: #333; /* Ciemno szare tło paginacji */
+    padding: 10px 0; /* Wewnętrzny odstęp paginacji */
+}
+
+.page-link {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 4px;
+    background-color: var(--color-secondary); /* Kolor tła paginacji */
+    color: black; /* Kolor tekstu paginacji */
+    border-radius: 5px; /* Zaokrąglenie rogów */
+    cursor: pointer;
+}
+
+.page-link:hover {
+    background-color: var(--color-accent); /* Kolor tła paginacji po najechaniu myszą */
+    color: white; /* Kolor tekstu paginacji po najechaniu myszą */
+}
