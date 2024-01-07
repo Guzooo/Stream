@@ -43,3 +43,7 @@ header .mdc-top-app-bar__row:nth-child(3) .mdc-top-app-bar__section .mdc-button 
 .mdc-top-app-bar__action-item:hover { /* elementy, kursor na */
     color: var(--color-accent) !important;
 }
+
+.current-page-action-item { /* elementy, kursor na */
+    color: var(--color-accent-second) !important;
+}
