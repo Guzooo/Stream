@@ -1,0 +1,36 @@
+/* Updated CSS */
+.button-container {
+    position: fixed;
+    bottom: 6vh;
+    left: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: rgba(0, 0, 0, 0); /* Transparent blue */
+    padding: 2vh;
+    border-radius: 2vh;
+}
+
+/* Updated CSS */
+.game-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1vh;
+    padding: 3vh;
+    background-color: #f0f0f0;
+    color: black;
+    width: 60vh;
+    border: 1vh solid #363636;
+    border-radius: 2vh;
+    font-size: 1.2vw;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Stylowanie po najechaniu */
+.game-block:hover {
+    background-color: #b1afaf; /* Kolor podświetlenia po najechaniu */
+    cursor: pointer; /* Zmiana kursora na wskaźnik, aby pokazać interaktywność */
+}
