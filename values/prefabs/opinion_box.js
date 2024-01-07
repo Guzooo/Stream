@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     container.innerHTML += `
         <div id="opinion-box" class="white-box">
-            <button id="add-opinion-button" class="mdc-button">Dodaj opinię</button>
+            <button id="add-opinion-button" class="mdc-button">Dodaj opis</button>
             <button id="save-opinion-button" class="mdc-button" disabled>Zapisz</button>
             <div id="opinion-content" class="opinion-content" contenteditable="false">
                 <div id="text-container" class="text-container"></div>
