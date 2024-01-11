@@ -20,6 +20,60 @@ const gamesData = [
         "favorite": false
     },
     {
+        "userId": 1,
+        "gameName": "CS:GO",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS2",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS2:GO",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS3:GO:GO",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS:GO:GO:GO",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS3i1/5",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS:1/4:3/4",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS:TAK",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
+        "userId": 1,
+        "gameName": "CS:NIE",
+        "downloaded": true,
+        "favorite": false
+    },
+    {
         "userId": 0,
         "gameName": "MARIOPROS",
         "downloaded": true,
