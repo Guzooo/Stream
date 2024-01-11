@@ -1,0 +1,47 @@
+/* Updated CSS */
+#box {
+    position: fixed;
+    top: calc(35% + 11px);
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 35vw; /* 30% szerokości widoku */
+    height: 30vh; /* 25% wysokości widoku */
+    background-color: #363636;
+    border: 2px solid #000;
+}
+
+#avatar {
+    width: 12vw; /* 10% szerokości widoku */
+    height: 12vw; /* 10% szerokości widoku */
+    margin: 1vw; /* 5% szerokości widoku */
+    border: 3px solid #000;
+}
+
+#textArea {
+    box-sizing: border-box;
+    padding: 2vw; /* 2% szerokości widoku */
+    color: white;
+    font-size: 2vw; /* 2% szerokości widoku */
+    position: absolute;
+    top: 0%;
+    left: 70%;
+    transform: translateX(-50%);
+}
+
+#editButton {
+    position: absolute;
+    bottom: 2vh; /* 2% wysokości widoku */
+    left: 70%;
+    transform: translateX(-50%);
+    padding: 1vw; /* 1% szerokości widoku */
+    background-color: #f0f0f0;
+    color: #000;
+    border: 1.5px solid #000; /* 1.5% szerokości widoku */
+    cursor: pointer;
+    margin-top: 1vw; /* 1% szerokości widoku */
+    transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+#editButton:hover {
+    background-color: #b1afaf; /* Change color on hover */
+}
