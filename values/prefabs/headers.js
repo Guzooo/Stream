@@ -1,6 +1,6 @@
 const PrefabHeader = (function(){
 
-    const CURRENT_PAGE_CLASS = ".current-page-action-item";
+    const CURRENT_PAGE_CLASS = "current-page-action-item";
 
     //metody, które będą dostępne publicznie
     return {
@@ -50,7 +50,7 @@ const PrefabHeader = (function(){
                         <span class="mdc-button__label">Wyloguj się</span>
                     </a>`
         } else {
-            return `<a href="..\loggin" class="mdc-button mdc-top-app-bar__action-item">
+            return `<a href="..\\loggin" class="mdc-button mdc-top-app-bar__action-item">
                         <span class="mdc-button__ripple"></span>
                         <span class="mdc-button__label">Zaloguj się</span>
                     </a>`
@@ -64,16 +64,16 @@ const PrefabHeader = (function(){
         } else if (userType == User.UZYTKOWNIK_ZALOGOWANY){
             return generatePageElement("Nowości", "")
                 + generatePageElement("Twoje Gry", "yourGames")
-                + generatePageElement("Społeczność", "")
+                + generatePageElement("Społeczność", "community")
                 + generatePageElement("Profil", "profile");
         } else if (userType == User.UZYTKOWNIK_NIEZALOGOWANY){
              return generatePageElement("Nowości", "")
-                 + generatePageElement("Społeczność", "yourGames");
+                 + generatePageElement("Społeczność", "community");
          }
     }
 
     function generatePageElement(name, address){
-        const currentClass = isThisPageOpen(name) ? CURRENT_PAGE_CLASS : '';
+        const currentClass = isThisPageOpen(address) ? CURRENT_PAGE_CLASS : '';
         return `<a href="..\\` + address + `" class="mdc-button mdc-top-app-bar__action-item ` + currentClass + `">
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__label">` + name + `</span>

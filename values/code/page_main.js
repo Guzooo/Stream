@@ -10,7 +10,7 @@ const PageMain = (function(){
         if(userType == User.WERYFIKATOR) {
             window.open("pages/verification", "_self");
         } else {
-            window.open("pages/yourGames", "_self"); //TODO: mają byc nowowści
+            window.open("pages/community", "_self"); //TODO: mają byc nowowści
         }
     }
 

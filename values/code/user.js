@@ -33,9 +33,9 @@ const User = (function(){
     // patrzy linie 3-7;
     function getTypeOfLoggedUser(){
         switch(getUserId()){
-            case 0:
+            case "0":
                 return UZYTKOWNIK_ZALOGOWANY;
-            case 1:
+            case "1":
                 return WERYFIKATOR;
             default:
                 return UZYTKOWNIK_NIEZALOGOWANY;
@@ -62,6 +62,7 @@ const User = (function(){
 
     function logOut(){
         createUserIdCookie("", -30);
+        window.open("../..", "_self");
     }
 
     /* metody prywatne */
@@ -74,7 +75,7 @@ const User = (function(){
       const d = new Date();
       d.setTime(d.getTime() + (minutes*60*1000));    //ustawiamy, "automatyczne wylogowanie" po minutach
       document.cookie = COOKIE_NAME + "=" + id + ";"
-                + "expires="+ d.toUTCString();
+                + "expires="+ d.toUTCString() +"; path=/";
     }
 
 })();

@@ -12,7 +12,7 @@ const PrefabAddGames = (function() {
         }
 
         gamesData.forEach(gameData => {
-            if (gameData.userId === User.getUserId()) {
+            if (gameData.userId == User.getUserId()) {
                 container.innerHTML += generateGameBlock(gameData);
             }
         });
