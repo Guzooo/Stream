@@ -1,36 +1,49 @@
-/* Updated CSS */
-.button-container {
+/* Updated CSS for box-container */
+.box-container {
     position: fixed;
-    bottom: 6vh;
-    left: 2vh;
+    bottom: 10%;
+    left: 1%;
+    top: 55%;
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     background-color: rgba(0, 0, 0, 0); /* Transparent blue */
-    padding: 2vh;
-    border-radius: 2vh;
+    padding: 0.5em; /* Adjusted padding */
+    border-radius: 1em;
+    min-width: 30%; /* Minimal width in percentage */
+    min-height: 30%; /* Minimal height in pixels */
 }
 
-/* Updated CSS */
-.game-block {
+/* Updated CSS for box */
+.box {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 1vh;
-    padding: 3vh;
+    margin: 3%;
+    padding: 2%; /* Adjusted padding */
     background-color: #f0f0f0;
     color: black;
-    width: 60vh;
-    border: 1vh solid #363636;
-    border-radius: 2vh;
-    font-size: 1.2vw;
+    max-width: 100%; /* Maximum width in percentage */
+    width: 100%; /* 100% of available space width */
+    border: 0.5em solid #363636;
+    border-radius: 1em;
+    font-size: 0.8em; /* Adjusted font-size */
     cursor: pointer;
     transition: background-color 0.3s ease;
+    min-height: 20%; /* Minimal height in pixels */
 }
 
+/* Updated CSS for count-box */
+.count-box {
+    font-size: 1.5em; /* Adjusted font-size */
+    font-weight: bold;
+    margin-top: 0.5em;
+}
 
-/* Stylowanie po najechaniu */
-.game-block:hover {
-    background-color: #b1afaf; /* Kolor podświetlenia po najechaniu */
-    cursor: pointer; /* Zmiana kursora na wskaźnik, aby pokazać interaktywność */
+/* Styling on hover */
+.box:hover {
+    background-color: #b1afaf; /* Highlight color on hover */
+    cursor: pointer; /* Change cursor to pointer to indicate interactivity */
 }
