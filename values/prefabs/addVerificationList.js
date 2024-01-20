@@ -10,7 +10,7 @@ const PrefabVerificatorList = (function() {
         }
 
         gamesData.forEach(gameData => {
-            if (gameData.userId == User.getUserId()) {
+            if (gameData.userID == User.getUserId()) {
                 container.innerHTML += generateGameBlock(gameData);
             }
         });
