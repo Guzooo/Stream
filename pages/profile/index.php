@@ -1,9 +1,10 @@
 <html lang="pl">
     <head>
-        <title>Stream • Twoje gry</title>
+        <title>Stream • Profil</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" href="../../values/images/logo128.png" type="image/png">
+        <meta name="theme-color" content="javascript:var(--color-primary-second)"/>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rubik">
         <link rel="stylesheet" href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css">
@@ -14,24 +15,23 @@
         <link rel="stylesheet" href="../../values/colors.css">
         <link rel="stylesheet" href="../../values/styles/base.css">
         <link rel="stylesheet" href="../../values/styles/headers.css">
-        <link rel="stylesheet" href="../../values/styles/game-block.css">
+        <link rel="stylesheet" href="../../values/styles/opinion_box.css">
+        <link rel="stylesheet" href="../../values/styles/avatar.css">
+        <link rel="stylesheet" href="../../values/styles/profile-buttons.css">
 
         <script src="../../values/prefabs/headers.js"></script>
         <script src="../../values/code/user.js"></script>
-        <script src="../../values/prefabs/addGame.js"></script>
-        <script src="../../values/code/page_yourGames.js"></script>
+        <script src="../../values/prefabs/opinion_box.js"></script>
+        <script src="../../values/prefabs/avatar.js"></script>
+        <script src="../../values/prefabs/buttons.js"></script>
     </head>
     <body>
         <script>
             PrefabHeader.get();
         </script>
+        <main class="mdc-top-app-bar--fixed-adjust">
 
-        <main>
-            <div id="yourGamesContainer"></div>
-            <script>
-                PrefabAddGames.addGames(document.getElementById('yourGamesContainer'), gamesData);
-            </script>
         </main>
-        </body>
+    </body>
     <script src="../../values/code/base.js"></script>
 </html>

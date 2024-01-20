@@ -20,8 +20,12 @@
         <script src="../../values/code/user.js"></script>
         <script src="../../values/prefabs/addGame.js"></script>
         <script src="../../values/code/page_yourGames.js"></script>
+        <script src="../../values/db/DB2ArrayController.php"></script>
     </head>
     <body>
+        <script>
+            PrefabHeader.get();
+        </script>
         <main>
             <div id="yourGamesContainer"></div>
             <script>
@@ -30,6 +34,5 @@
         </main>
         </body>
     <script src="../../values/code/base.js"></script>
+
 </html>
-
-
