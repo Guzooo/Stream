@@ -41,19 +41,14 @@
                 $result = $conn->query($sql);
 
                 if ($result->num_rows > 0) {
-                  while($row = $result->fetch_assoc()) {
-        ?>
-                    <span>Gra: <?php $row["gameName"]?> </span>
-        <?php
-                  }
-                } else {
-        ?>
-                    <span>Brak gier</span>
-        <?php
+                    while ($row = $result->fetch_assoc()) {
+                        echo '<span>Gra: ' . $row["gameName"] . ' </span>';
+                    }
                 }
                 $conn->close();
             }
         ?>
+
         <main>
             <div id="yourGamesContainer"></div>
             <script>
