@@ -4,13 +4,13 @@ const PrefabAddGames = (function() {
     };
 
     function addGames(container, gamesData) {
-        if (!container || !Array.isArray(gamesData)) {
+        if (!container) {
             console.error('Invalid arguments');
             return;
         }
 
         gamesData.forEach(gameData => {
-            if (gameData.userId == User.getUserId()) {
+            if (gameData.userID == User.getUserId()) {
                 container.innerHTML += generateGameBlock(gameData);
             }
         });
@@ -22,7 +22,7 @@ const PrefabAddGames = (function() {
                 <p>
                     ${gameData.favourite ? '<span class="material-icons">star</span>' : ''}
                     <strong>${gameData.gameName}</strong>
-                    ${gameData.downloaded ? 'Pobrane: <span class="material-icons">done</span>' : 'Pobrane: <span class="material-icons">close</span>'}
+                    ${gameData.downloaded == "1" ? 'Pobrane: <span class="material-icons">done</span>' : 'Pobrane: <span class="material-icons">close</span>'}
                 </p>
             </div>
         `;
