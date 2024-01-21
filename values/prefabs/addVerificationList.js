@@ -26,5 +26,11 @@ const PrefabVerificatorList = (function() {
                 </p>
             </div>
         `;
+
+         container.addEventListener('click', function (event) {
+            if (event.target.classList.contains('button1')) {
+                showEditPopup(event.target);
+            }
+        });
     }
 })();
