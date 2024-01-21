@@ -1,49 +1,48 @@
-/* Updated CSS for box-container */
-.box-container {
+body {
+    margin: 0;
+}
+
+.container, .box1 {
     position: fixed;
-    bottom: 10%;
-    left: 1%;
-    top: 55%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: rgba(0, 0, 0, 0); /* Transparent blue */
-    padding: 0.5em; /* Adjusted padding */
-    border-radius: 1em;
-    min-width: 30%; /* Minimal width in percentage */
-    min-height: 30%; /* Minimal height in pixels */
-}
-
-/* Updated CSS for box */
-.box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 3%;
-    padding: 2%; /* Adjusted padding */
+    top: 63%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 35%; /* 30% szerokości widoku */
+    height: 12vh; /* 25% wysokości widoku */
     background-color: #f0f0f0;
+    border: 2px solid #000;
+    border-radius: 15px; /* Dodano zaokrąglenie rogów */
+    display: flex; /* Dodano flexbox do centralizacji tekstu */
+    flex-direction: column; /* Ustawienie kierunku flexbox na kolumnę */
+    justify-content: center; /* Centralizacja w pionie */
+    align-items: center; /* Centralizacja w poziomie */
     color: black;
-    max-width: 100%; /* Maximum width in percentage */
-    width: 100%; /* 100% of available space width */
-    border: 0.5em solid #363636;
-    border-radius: 1em;
-    font-size: 0.8em; /* Adjusted font-size */
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    min-height: 20%; /* Minimal height in pixels */
+    font-size: 2vw; /* 2% szerokości widoku */
 }
 
-/* Updated CSS for count-box */
-.count-box {
-    font-size: 1.5em; /* Adjusted font-size */
+.container, .box2 {
+    position: fixed;
+    top: 80%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    width: 35%; /* 30% szerokości widoku */
+    height: 12vh; /* 25% wysokości widoku */
+    background-color: #f0f0f0;
+    border: 2px solid #000;
+    border-radius: 15px; /* Dodano zaokrąglenie rogów */
+    display: flex; /* Dodano flexbox do centralizacji tekstu */
+    flex-direction: column; /* Ustawienie kierunku flexbox na kolumnę */
+    justify-content: center; /* Centralizacja w pionie */
+    align-items: center; /* Centralizacja w poziomie */
+    color: black;
+    font-size: 2vw; /* 2% szerokości widoku */
+}
+
+.box-title {
     font-weight: bold;
-    margin-top: 0.5em;
 }
 
-/* Styling on hover */
-.box:hover {
-    background-color: #b1afaf; /* Highlight color on hover */
-    cursor: pointer; /* Change cursor to pointer to indicate interactivity */
+.box-content {
+    margin-top: 5px;
+
 }

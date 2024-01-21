@@ -21,16 +21,26 @@
 
         <script src="../../values/prefabs/headers.js"></script>
         <script src="../../values/code/user.js"></script>
-        <script src="../../values/prefabs/opinion_box.js"></script>
-        <script src="../../values/prefabs/avatar.js"></script>
-        <script src="../../values/prefabs/buttons.js"></script>
+        <script src="../../values/code/page_profile.js"></script>
+        <script src="../../values/prefabs/addDescription.js"></script>
+        <script src="../../values/prefabs/addUserProfile.js"></script>
+        <script src="../../values/prefabs/addGameTabs.js"></script>
+        <script src="../../values/db/DB2ArrayProfileController.php"></script>
+        <script src="../../values/db/UsernameToDBController.php"></script>
     </head>
     <body>
         <script>
             PrefabHeader.get();
         </script>
-        <main class="mdc-top-app-bar--fixed-adjust">
-
+        <main>
+            <div id="yourDescription"></div>
+            <div id="yourAvatar"></div>
+            <div id="yourGameBoxes"></div>
+            <script>
+                PrefabgenerateDesc.addDescriptions(document.getElementById('yourDescription'), userData);
+                PrefabGenerateUser.addUserProfiles(document.getElementById('yourAvatar'),userData);
+                PrefabGenerateBoxes.addBoxItems(document.getElementById('yourGameBoxes'),userData);
+            </script>
         </main>
     </body>
     <script src="../../values/code/base.js"></script>
