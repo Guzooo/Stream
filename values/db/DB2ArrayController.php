@@ -26,5 +26,4 @@ $conn->close();
 
 // Zapisz dane w pliku JavaScript
 file_put_contents('../code/page_yourGames.js', 'const gamesData = ' . json_encode($gamesData) . ';');
-
 ?>
