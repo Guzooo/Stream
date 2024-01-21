@@ -1,60 +1,53 @@
-/* Updated CSS for box */
-#box {
-    position: fixed;
-    top: calc(35% + 11px);
-    left: 20%;
-    transform: translate(-50%, -50%);
-    width: 35vw; /* 30% szerokości widoku */
+.user-image img {
+    display: flex;
+    flex-direction: column; /* Kierunek rozmieszczenia elementów - pionowy */
+    justify-content: space-between; /* Rozmieszczenie równomierne wzdłuż osi pionowej */
+    width: 90%;
+    height: 90%;
+    object-fit: cover;
+    border: 3px solid #000;
+    margin: 5%;
+}
+
+.user-profile-block {
+    display: flex;
+    margin-top: -30%;
+    margin-left: 2%;
+    left: 30%;
+    width: 35%; /* 30% szerokości widoku */
     height: 30vh; /* 25% wysokości widoku */
-    min-width: 200px; /* Minimalna szerokość w pikselach */
-    max-width: 52%; /* Maksymalna szerokość w procentach */
-    min-height: 150px; /* Minimalna wysokość w pikselach */
-    max-height: 50vh; /* Maksymalna wysokość w procentach */
+    padding-right: 3%;
     background-color: #363636;
     border: 2px solid #000;
 }
 
-#avatar {
-    width: 35%; /* 10% szerokości widoku */
-    height: calc(40% - 10%); /* 10% szerokości widoku minus 10% */
-    min-width: 35%; /* Minimalna szerokość w pikselach */
-    max-width: 35%; /* Maksymalna szerokość w procentach */
-    min-height: calc(90% - 10%); /* Minimalna wysokość w pikselach */
-    max-height: 80%; /* Maksymalna wysokość w procentach */
-    margin: 4%; /* 5% szerokości widoku */
-    border: 3px solid #000;
-}
-
-/* Updated CSS for textArea */
-#textArea {
-    box-sizing: border-box;
-    top: 10%;
-
-    color: white;
-    font-size: 1.7vw; /* 2% szerokości widoku */
+.user-actions button {
     position: absolute;
-    left: 72%;
+    top: 42%;
+    left: 18%;
     transform: translateX(-50%);
-    max-width: 300px; /* Maksymalna szerokość w pikselach */
-}
-
-/* Updated CSS for editButton */
-#editButton {
-    position: absolute;
-    bottom: 2vh; /* 2% wysokości widoku */
-    left: 70%;
-    transform: translateX(-50%);
-    padding: 1vw; /* 1% szerokości widoku */
+    padding: 1vw;
     background-color: #f0f0f0;
     color: #000;
-    border: 1.5px solid #000; /* 1.5% szerokości widoku */
+    border: 1.5px solid #000;
     cursor: pointer;
-    margin-top: 1vw; /* 1% szerokości widoku */
-    transition: background-color 0.3s ease; /* Add transition effect */
-    max-width: 200px; /* Maksymalna szerokość w pikselach */
+    margin-top: 1vw;
+    transition: background-color 0.3s ease;
+    max-width: 200px;
 }
 
-/* Styling on hover for editButton */
-#editButton:hover {
-    background-color: #b1afaf; /* Change color on hover */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.username {
+    box-sizing: border-box;
+    top: 27%;
+    left: 28%;
+    color: white;
+    font-size: 2vw; /* 2% szerokości widoku */
+    position: absolute;
+    transform: translateX(-50%);
+    max-width: 300px; /* Maksymalna szerokość w pikselach */
 }

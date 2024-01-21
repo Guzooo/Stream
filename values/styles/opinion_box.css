@@ -1,38 +1,42 @@
-#opinion-box {
+.desc-block {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 45%;
+    left: 30%;
+    width: 50vw; /* 50% szerokości widoku */
+    height: calc(64vh - 4px); /* 60% wysokości widoku */
+
     background-color: #f0f0f0;
     border: 2px solid black;
-    color: black;
-    width: 50vw; /* 50% szerokości widoku */
-    height: 60vh; /* 60% wysokości widoku */
-    padding: 2vw; /* 2% szerokości widoku */
-    position: fixed;
-    top: 55%;
-    right: 5vw; /* 5% szerokości widoku */
-    transform: translateY(-50%);
-    font-size: 2.5vw; /* 2.5% szerokości widoku */
-    overflow: auto;
 }
 
-#add-opinion-button,
-#save-opinion-button {
+.desc-block p {
+    margin-bottom: 10px;
+}
+
+.action-buttons {
+    margin-bottom: 10px;
+}
+
+.edit-button,
+.save-button {
     background-color: #363636;
     border: 2px solid black;
-    top: -4%;
+    margin-top: 8%;
+    margin-left: 10%;
     color: white;
     z-index: 1;
     width: 10vw; /* Adjust the viewport width based on your design */
-    height: 5vh; /* Adjust the viewport height based on your design */
+    height: 6vh; /* Adjust the viewport height based on your design */
 }
 
-.opinion-content {
-    height: calc(100% - 5vw); /* 100% wysokości - 5% szerokości widoku */
-    margin-bottom: 1vw; /* 1% szerokości widoku */
+.description-edit {
+    height: calc(100% - 6vw); /* 100% wysokości - 5% szerokości widoku */
+    width: 230%;
+    margin-left: -40%;
+    margin-top: 20%;
+    color: black;
+    font-size: 1.7vw; /* 2% szerokości widoku */
     border: 1px solid #ccc;
     padding: 0.2vw; /* 0.2% szerokości widoku */
-}
-
-.text-container {
-    white-space: pre-wrap;
-    word-wrap: break-word;
-    max-width: 50vw; /* 50% szerokości widoku */
 }

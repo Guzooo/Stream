@@ -20,7 +20,8 @@
         <script src="../../values/prefabs/headers.js"></script>
         <script src="../../values/code/user.js"></script>
         <script src="../../values/prefabs/addVerificationList.js"></script>
-        <script src="../../values/code/page_yourGames.js"></script>
+        <script src="../../values/code/page_verification.js"></script>
+        <script src="../../values/db/DB2ArrayVerification.php"></script>
     </head>
     <body>
         <script>

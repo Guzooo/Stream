@@ -11,7 +11,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM gry";
+$sql = "SELECT * FROM niezweryfikowane";
 $result = $conn->query($sql);
 
 $gamesData = array(); // Utwórz tablicę na dane
@@ -25,5 +25,5 @@ if ($result->num_rows > 0) {
 $conn->close();
 
 // Zapisz dane w pliku JavaScript
-file_put_contents('../code/page_yourGames.js', 'const gamesData = ' . json_encode($gamesData) . ';');
+file_put_contents('../code/page_verification.js', 'const gamesData = ' . json_encode($gamesData) . ';');
 ?>
