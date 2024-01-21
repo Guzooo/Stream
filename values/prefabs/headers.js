@@ -60,16 +60,24 @@ const PrefabHeader = (function(){
         }
     }
 
-    function generatePages(){
+    function generatePages() {
         const userType = User.getTypeOfLoggedUser();
-        if(userType == User.WERYFIKATOR) {
+        if (userType == User.WERYFIKATOR) {
             return generatePageElement("Weryfikacje", "verification");
-        } else if (userType == User.UZYTKOWNIK_ZALOGOWANY){
+        } else if (userType == User.UZYTKOWNIK_ZALOGOWANY) {
             return generatePageElement("Nowości", "")
                 + generatePageElement("Twoje Gry", "yourGames")
                 + generatePageElement("Społeczność", "community")
                 + generatePageElement("Profil", "profile");
-        } else if (userType == User.UZYTKOWNIK_NIEZALOGOWANY){
+        } else if (userType == User.TWORCA){
+            return generatePageElement("Nowości", "")
+                + generatePageElement("Społeczność", "community")
+                + generatePageElement("Profil", "profile");
+        } else if (userType == User.SOCIAL_MANAGER){
+            return generatePageElement("Nowości", "")
+                + generatePageElement("Społeczność", "community")
+                + generatePageElement("Profil", "profile");
+        } else {
              return generatePageElement("Nowości", "")
                  + generatePageElement("Społeczność", "community");
          }
