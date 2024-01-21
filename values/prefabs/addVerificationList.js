@@ -22,7 +22,6 @@ const PrefabVerificatorList = (function() {
                 <p>
                     <strong>${gameData.gameName}</strong>
                     <button type="button" class="button3">Szczegóły</button>
-                    <button type="button" class="button2">Odrzuć</button>
                     <button type="button" class="button1">Zatwierdź</button>
                 </p>
             </div>
