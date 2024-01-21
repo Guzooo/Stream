@@ -29,8 +29,12 @@ const PrefabVerificatorList = (function() {
 
          container.addEventListener('click', function (event) {
             if (event.target.classList.contains('button1')) {
-                showEditPopup(event.target);
+                verifyGame(event.target, gameData.ID, gameData.tworcaID, gameData.gameName);
             }
         });
+    }
+
+     function verifyGame(button1, gID, tID, gName) {
+        }
     }
 })();
