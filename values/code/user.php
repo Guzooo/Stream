@@ -18,9 +18,6 @@ if (isset($_POST['action'])) {
         case 'getId':
             getId($conn);
             break;
-        case 'getUserType':
-            getUserType($conn);
-            break;
         default:
             echo -1;
             break;
@@ -34,31 +31,19 @@ function getId($conn) {
 
 
 
-    $sql = "SELECT id FROM users WHERE email == '$userEmail' AND password == '$userPassword'";
+    $sql = "SELECT id, user_type FROM users WHERE email == '$userEmail' AND password == '$userPassword'";
     $result = $conn->query($sql);
     $id = -1;
+    $userType = -1;
 
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             $id = $row['id'];
+            $userType = $row['$user_type'];
         }
     }
+    $arr = array('id' => $id, 'userType' => $userType);
 
-    echo json_encode(['result' => $id]);;
-}
 
-function getUserType($conn){
-    $id = $_POST['id'];
-
-    $sql = "SELECT user_type FROM users WHERE id == '$id'";
-    $result = $conn->query($sql);
-    $type = -1;
-
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            $type =  $row['user_type'];
-        }
-    }
-
-    echo json_encode(['result' => $type]);;
+    echo json_encode($arr);
 }
