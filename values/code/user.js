@@ -56,10 +56,7 @@ const User = (function(){
 
     //zwraca true lub fałsz w zależności czy udało się zalogować
     function tryLoggin(email, password){
-        let id = -1;
-        let userType = -1;
         let data = new URLSearchParams();
-        data.append('action', 'getId');
         data.append('email', email);
         data.append('password', password);
 
@@ -71,17 +68,13 @@ const User = (function(){
                 'Content-Type': 'application/x-www-form-urlencoded'
             }
         })
-            .then(response => {
-                console.log(response);
-                response.json()
-            })
-            .then(response => {
-                id = response.result.id;
-                userType = response.result.userType;
 
-                if(id != -1){
-                    createUserIdCookie(id, userType, 30);
-                    return true;
+            .then(response => {
+                for(let i = 0; i < arr.length; i++){
+                    if(arr[i].email == email && arr[i].password == password) {
+                        createUserIdCookie(arr[i].id, arr[i].user_type, 30);
+                        return true;
+                    }
                 }
                 return false;
             })
@@ -107,7 +100,8 @@ const User = (function(){
       const d = new Date();
       d.setTime(d.getTime() + (minutes*60*1000));    //ustawiamy, "automatyczne wylogowanie" po minutach
       document.cookie = COOKIE_NAME + "=" + id + ";"
-                + COOKIE2_NAME + "=" + userType + ";"
+                + "expires="+ d.toUTCString() +"; path=/";
+      document.cookie = COOKIE2_NAME + "=" + userType + ";"
                 + "expires="+ d.toUTCString() +"; path=/";
     }
 

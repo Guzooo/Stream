@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="../../values/styles/texts.css">
 
         <script src="../../values/code/user.js"></script>
+        <script src="../../values/code/user.php"></script>
+        <script src="../../values/code/user_db.js"></script>
         <script src="../../values/prefabs/headers.js"></script>
         <script src="../../values/code/page_loggin.js"></script>
     </head>
