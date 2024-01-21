@@ -46,7 +46,7 @@
                                 </span>
                                 <span class="mdc-notched-outline__trailing"></span>
                             </span>
-                            <input type="email" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                            <input type="email" class="mdc-text-field__input" aria-labelledby="my-label-id" required>
                         </label>
                         <label class="mdc-text-field mdc-text-field--outlined
                                       mdc-layout-grid__cell--span-12"
@@ -58,7 +58,7 @@
                                 </span>
                                 <span class="mdc-notched-outline__trailing"></span>
                             </span>
-                            <input type="password" class="mdc-text-field__input" aria-labelledby="my-label-id">
+                            <input type="password" class="mdc-text-field__input" aria-labelledby="my-label-id" required>
                         </label>
                         <button class="mdc-button mdc-button--outlined
                                        mdc-layout-grid__cell--span-12

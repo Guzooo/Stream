@@ -32,14 +32,36 @@ const User = (function(){
     //zwraca jaki typ użytkonika jest zalodowyany
     // patrzy linie 3-7;
     function getTypeOfLoggedUser(){
-        switch(getUserId()){
-            case "0":
-                return UZYTKOWNIK_ZALOGOWANY;
-            case "1":
-                return WERYFIKATOR;
-            default:
-                return UZYTKOWNIK_NIEZALOGOWANY;
-        }
+        let type = -1;
+        let data = new URLSearchParams();
+        data.append('action', 'getUserType');
+        data.append('id',  getUserId());
+
+        // Wyślij żądanie za pomocą Fetch
+        return fetch('../../values/code/user.php', {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+            .then(response => response.json())
+            .then(response => {
+                type = response.result;
+                switch(type){
+                    case "1":
+                        return UZYTKOWNIK_ZALOGOWANY;
+                    case "2":
+                        return TWORCA;
+                    case "3":
+                        return SOCIAL_MANAGER;
+                    case "4":
+                        return WERYFIKATOR;
+                    default:
+                        return UZYTKOWNIK_NIEZALOGOWANY;
+                }
+            })
+            .catch(error => console.error('Błąd sieciowy:', error));
     }
 
     //zwraca id uzytkownika, na jego podstawie będą wyciągane dane z bazy
@@ -50,14 +72,30 @@ const User = (function(){
 
     //zwraca true lub fałsz w zależności czy udało się zalogować
     function tryLoggin(email, password){
-        if(email == "guest@guest" && password == "guest"){
-            createUserIdCookie(0, 30);
-            return true;
-        } else if(email == "v@v" && password == "v"){
-            createUserIdCookie(1, 30);
-            return true;
-        }
-        return false;
+        let id = -1;
+        let data = new URLSearchParams();
+        data.append('action', 'getId');
+        data.append('email', email);
+        data.append('password', password);
+
+        // Wyślij żądanie za pomocą Fetch
+        return fetch('../../values/code/user.php', {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        })
+            .then(response => response.json())
+            .then(response => {
+                id = response.result;
+                if(id != -1){
+                    createUserIdCookie(id, 30);
+                    return true;
+                }
+                return false;
+            })
+            .catch(error => console.error('Błąd sieciowy:', error));
     }
 
     function logOut(){

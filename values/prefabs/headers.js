@@ -42,18 +42,21 @@ const PrefabHeader = (function(){
 
     function generateLogginLoggoutFunction(){
         if(isThisPageOpen("loggin")) {
-            return '';
+            return `<a href="..\\registration" class="mdc-button mdc-top-app-bar__action-item">
+                        <span class="mdc-button__ripple"></span>
+                        <span class="mdc-button__label">Zarejestruj się</span>
+                    </a>`;
         }
         if(User.isLogged()){
             return `<a onclick="User.logOut()" class="mdc-button mdc-top-app-bar__action-item">
                         <span class="mdc-button__ripple"></span>
                         <span class="mdc-button__label">Wyloguj się</span>
-                    </a>`
+                    </a>`;
         } else {
             return `<a href="..\\loggin" class="mdc-button mdc-top-app-bar__action-item">
                         <span class="mdc-button__ripple"></span>
                         <span class="mdc-button__label">Zaloguj się</span>
-                    </a>`
+                    </a>`;
         }
     }
 
@@ -77,7 +80,7 @@ const PrefabHeader = (function(){
         return `<a href="..\\` + address + `" class="mdc-button mdc-top-app-bar__action-item ` + currentClass + `">
                     <span class="mdc-button__ripple"></span>
                     <span class="mdc-button__label">` + name + `</span>
-                </a>`
+                </a>`;
     }
 
     function isThisPageOpen(page){
