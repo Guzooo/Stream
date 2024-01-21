@@ -12,6 +12,10 @@ if ($conn->connect_error) {
 }
 
 $sql = "SELECT * FROM gry";
+//TODO
+//Do tabeli gry dodac kolumne verified
+//zamienic zapytanie na
+// "SELECT * FROM gry WHERE verified = 0"
 $result = $conn->query($sql);
 
 $gamesData = array(); // Utwórz tablicę na dane
