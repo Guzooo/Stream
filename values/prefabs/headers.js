@@ -65,20 +65,20 @@ const PrefabHeader = (function(){
         if (userType == User.WERYFIKATOR) {
             return generatePageElement("Weryfikacje", "verification");
         } else if (userType == User.UZYTKOWNIK_ZALOGOWANY) {
-            return generatePageElement("Nowości", "")
+            return generatePageElement("Nowości", "news")
                 + generatePageElement("Twoje Gry", "yourGames")
                 + generatePageElement("Społeczność", "community")
                 + generatePageElement("Profil", "profile");
         } else if (userType == User.TWORCA){
-            return generatePageElement("Nowości", "")
+            return generatePageElement("Nowości", "news")
                 + generatePageElement("Społeczność", "community")
                 + generatePageElement("Profil", "profile");
         } else if (userType == User.SOCIAL_MANAGER){
-            return generatePageElement("Nowości", "")
+            return generatePageElement("Nowości", "news")
                 + generatePageElement("Społeczność", "community")
                 + generatePageElement("Profil", "profile");
         } else {
-             return generatePageElement("Nowości", "")
+             return generatePageElement("Nowości", "news")
                  + generatePageElement("Społeczność", "community");
          }
     }
