@@ -35,6 +35,20 @@ const PrefabVerificatorList = (function() {
     }
 
      function verifyGame(button1, gID, tID, gName) {
-        }
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', '../../values/db/VerificationToDBController.php', true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        const params = 'verifiedGameID=' + gID + '&tworcaID=' + tID + '&gameName=' + gName);
+        console.log(params);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState == 4 && xhr.status == 200) {
+                console.log(xhr.responseText);
+            }
+        };
+
+        xhr.send(params);   
+     }
     }
 })();
