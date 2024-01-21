@@ -21,7 +21,7 @@
         <script src="../../values/code/user.js"></script>
         <script src="../../values/prefabs/addVerificationList.js"></script>
         <script src="../../values/code/page_yourGames.js"></script>
-        <script src="../../values/db/DB2ArrayController.php"></script>
+        <script src="../../values/db/DB2ArrayVerification.php"></script>
     </head>
     <body>
         <script>
