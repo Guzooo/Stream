@@ -13,9 +13,9 @@ if ($conn->connect_error) {
 }
 
 // Pobierz dane przesłane za pomocą AJAX
-$verifiedGameID = $_POST['ID'];
+$verifiedGameID = $_POST['verifiedGameID'];
 $tworcaID = $_POST['tworcaID'];
-$gameName = $_POST['gameName']
+$gameName = $_POST['gameName'];
 
 // Aktualizuj tabele niezweryfikowane w bazie danych
 $sql1 = "DELETE FROM niezweryfikowane WHERE ID=$verifiedGameID";

@@ -8,38 +8,40 @@ const PrefabVerificatorList = (function() {
             console.error('Invalid arguments');
             return;
         }
+        for(let i = 0; i < gamesData.length; i++){
+                container.innerHTML += generateGameBlock(gamesData[i], i);
+        }
 
-        gamesData.forEach(gameData => {
-            if (gameData.userID == User.getUserId()) {
-                container.innerHTML += generateGameBlock(gameData);
+        container.addEventListener('click', function (event) {
+            const targetButton = event.target.closest('.button1');
+
+            if (targetButton) {
+                const dataId = targetButton.dataset.id;
+                verifyGame(targetButton, dataId, gamesData[dataId].tworcaID, gamesData[dataId].gameName);
             }
         });
+
     }
 
-    function generateGameBlock(gameData) {
+    function generateGameBlock(gameData, i) {
+        let num = i;
         return `
            <div class="game-block">
                 <p>
                     <strong>${gameData.gameName}</strong>
                     <button type="button" class="button3">Szczegóły</button>
-                    <button type="button" class="button1">Zatwierdź</button>
+                    <button type="button" class="button1" data-id="${num}">Zatwierdź</button>
                 </p>
             </div>
-        `;
-
-         container.addEventListener('click', function (event) {
-            if (event.target.classList.contains('button1')) {
-                verifyGame(event.target, gameData.ID, gameData.tworcaID, gameData.gameName);
-            }
-        });
+            `;
     }
 
-     function verifyGame(button1, gID, tID, gName) {
+    function verifyGame(button1, gID, tID, gName) {
         const xhr = new XMLHttpRequest();
         xhr.open('POST', '../../values/db/VerificationToDBController.php', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
-        const params = 'verifiedGameID=' + gID + '&tworcaID=' + tID + '&gameName=' + gName);
+        const params = ('verifiedGameID=' + gID + '&tworcaID=' + tID + '&gameName=' + gName);
         console.log(params);
 
         xhr.onreadystatechange = function () {
@@ -48,7 +50,7 @@ const PrefabVerificatorList = (function() {
             }
         };
 
-        xhr.send(params);   
+        xhr.send(params);
      }
-    }
+
 })();
