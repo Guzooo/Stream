@@ -39,10 +39,11 @@
     color: black;
     margin-top: 10px; /* Odstęp od nagłówka posta */
     max-height: 100px; /* Maksymalna wysokość, aby wyświetlać maksymalnie 5 linii tekstu */
-    overflow-y: scroll; /* Scrollowanie treści */
+    overflow-y: hidden; /* Ukryj przewijanie */
     font-size: 150%;
     border-radius: 3px; /* Zaokrąglenie rogów */
     border: 3px solid #080808; /* Ciemno szary border */
+    cursor: pointer; /* Dodaj kursor wskazujący, że element jest klikalny */
 }
 
 /* Styl dla paginacji */
