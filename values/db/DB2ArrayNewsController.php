@@ -25,5 +25,5 @@ if ($result->num_rows > 0) {
 $conn->close();
 
 // Zapisz dane w pliku JavaScript
-file_put_contents('../code/page_news.js', 'const gamesData = ' . json_encode($gamesData) . ';');
+
 ?>

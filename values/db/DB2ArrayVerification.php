@@ -26,4 +26,5 @@ $conn->close();
 
 // Zapisz dane w pliku JavaScript
 file_put_contents('../code/page_verification.js', 'const gamesData = ' . json_encode($gamesData) . ';');
+file_put_contents('../code/page_news.js', 'const gamesData = ' . json_encode($gamesData) . ';');
 ?>

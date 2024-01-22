@@ -10,7 +10,9 @@ const PrefabAddGames = (function() {
         }
 
         gamesData.forEach(gameData => {
-                container.innerHTML += generateGameBlock(gameData);
+                if(gameData.zweryfikowane == 1) {
+                    container.innerHTML += generateGameBlock(gameData);
+                }
         });
     }
 

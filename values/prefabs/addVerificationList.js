@@ -8,9 +8,15 @@ const PrefabVerificatorList = (function() {
             console.error('Invalid arguments');
             return;
         }
-        for(let i = 0; i < gamesData.length; i++){
-                container.innerHTML += generateGameBlock(gamesData[i], i);
-        }
+
+            for (let i = 0; i < gamesData.length; i++) {
+                if(gamesData[i].zweryfikowane == 0) {
+                    container.innerHTML += generateGameBlock(gamesData[i], i);
+                }
+
+
+            }
+
 
         container.addEventListener('click', function (event) {
             const targetButton = event.target.closest('.button1');
@@ -18,6 +24,7 @@ const PrefabVerificatorList = (function() {
             if (targetButton) {
                 const dataId = targetButton.dataset.id;
                 verifyGame(targetButton, dataId, gamesData[dataId].tworcaID, gamesData[dataId].gameName);
+
             }
         });
 
@@ -36,12 +43,14 @@ const PrefabVerificatorList = (function() {
             `;
     }
 
-    function verifyGame(button1, gID, tID, gName) {
+    function verifyGame(button1, gID) {
+        gID = parseInt(gID) + 1;
         const xhr = new XMLHttpRequest();
         xhr.open('POST', '../../values/db/VerificationToDBController.php', true);
         xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
 
-        const params = ('verifiedGameID=' + gID + '&tworcaID=' + tID + '&gameName=' + gName);
+
+        const params = ('verifiedGameID=' + gID);
         console.log(params);
 
         xhr.onreadystatechange = function () {
@@ -52,5 +61,7 @@ const PrefabVerificatorList = (function() {
 
         xhr.send(params);
      }
+
+
 
 })();
